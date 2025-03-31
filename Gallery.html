@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="Gallery.css">
+</head>
+<body>
+
+    <div class="menu">
+        <h1>Gallery</h1>
+        <div class="gallery-container">
+            <img src="MG 1.jpg" alt="Game Screenshot 1" onclick="openModal(this)">
+            <img src="MG 2.jpg" alt="Game Screenshot 2" onclick="openModal(this)">
+            <img src="MG 3.jpg" alt="Game Screenshot 3" onclick="openModal(this)">
+            <img src="MG 4.jpg" alt="Game Screenshot 4" onclick="openModal(this)">
+            <img src="MG 5.png" alt="Game Screenshot 5" onclick="openModal(this)">
+            <img src="MG 6.png" alt="Game Screenshot 6" onclick="openModal(this)">
+            <img src="MG 7.png" alt="Game Screenshot 7" onclick="openModal(this)">
+            <img src="MG 8.png" alt="Game Screenshot 8" onclick="openModal(this)">
+            <img src="MG 9.png" alt="Game Screenshot 9" onclick="openModal(this)">
+            <img src="MG 10.png" alt="Game Screenshot 10" onclick="openModal(this)">
+            <img src="MG 11.png" alt="Game Screenshot 11" onclick="openModal(this)">
+        </div>
+    </div>
+
+    <!-- Modal for full-screen image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <div class="menu">
+        <h1>P.C OR LAPTOP tutorial</h1>
+        <p>
+            the → is the left movement of the character<br>
+            the ← is the right movement of the character<br>
+            the ↑ is the up movement of the character<br>
+            the ↓ is the down movement of the character<br>
+            E is in interact
+            left click to next the button 
+        </p>
+    </div>
+
+    <div class="menu">
+        <h1>ATTACK Tutorial</h1>
+        <p>
+            the enter is again or continue <br>
+            the  1 majic <br>
+            the  2 shield <br>
+            the arrow keys is the movement of the character <br>
+        </p>
+    </div>
+
+    <br><br>
+    <div class="menu">
+        <h1>Mobile tutorial 'still in development'</h1>
+        <p>
+            ..... <br>
+            ....<br>
+            ... <br>
+            .. <br>
+        </p>
+    </div>
+
+    <br><br>
+
+    <div class="menu">
+        <button style="display: block; margin: 20px auto;" onclick="window.location.href='TUMBOFMASK.html'">⬅ Back</button>
+    </div>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const fullImage = document.getElementById('fullImage');
+            fullImage.src = img.src;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

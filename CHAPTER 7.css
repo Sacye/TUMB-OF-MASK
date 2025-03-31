@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background: black;
+}
+
+/* Dialogue Box */
+#dialogue-box {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    z-index: 1000;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#dialogue-box button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* Mobile Touch Controls */
+#mobile-controls {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    z-index: 10;
+}
+
+.horizontal-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+/* Button Size Auto-Scales */
+button {
+    width: 12vw;
+    height: 12vw;
+    max-width: 50px;
+    max-height: 50px;
+    font-size: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adjust Button Size for Smaller Screens */
+@media (max-width: 600px) {
+    button {
+        width: 14vw;
+        height: 14vw;
+        font-size: 10px;
+    }
+}
+
+/* Ensure buttons appear in landscape mode */
+@media (orientation: landscape) {
+    #mobile-controls {
+        bottom: 5%;
+        left: 5%;
+        display: flex !important;
+    }
+}
+
+/* Hide Mobile Controls on PC */
+@media (min-width: 768px) {
+    #mobile-controls {
+        display: none;
+    }
+}
+
+/* Introduction Section */
+#introduction {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 200;
+}
+
+#introduction button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+}

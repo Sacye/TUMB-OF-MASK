@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prologue - The Tomb of Mask</title>
+    <link rel="stylesheet" href="PROLOGUE.css">
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Dialogue Box -->
+    <div id="dialogue-box">
+        <p id="dialogue-text"></p>
+        <button onclick="nextDialogue()">Next</button>
+    </div>
+
+    <!-- Music Toggle Button -->
+    <button id="music-toggle" onclick="toggleMusic()" style="
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        background: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 100;
+    ">Pause Music</button>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="Prologue.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="PROLOGUE.js"></script>
+
+</body>
+</html>

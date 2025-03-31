@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8 - The Final Battle</title>
+    <link rel="stylesheet" href="CHAPTER 8.css">
+</head>
+<body>
+
+    <!-- Introduction Screen -->
+    <div id="intro-screen">
+        <h1>Chapter 8</h1>
+        <h2>The End?....</h2>
+    </div>
+
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+
+    <!-- Dialogue Box -->
+    <div id="dialogue-box" style="display: none;">
+        <p id="dialogue-text"></p>
+        <!-- Choices will be dynamically added here -->
+    </div>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls" style="display: none;">
+        <button id="up">▲</button>
+        <div class="horizontal-buttons">
+            <button id="left">◀</button>
+            <button id="attack">⚔</button>
+            <button id="magic">✨</button>
+            <button id="right">▶</button>
+        </div>
+        <button id="down">▼</button>
+    </div>
+
+    <!-- Choice Box for Endings -->
+    <div id="choice-box" style="display: none;">
+        <p>What will you do?</p>
+        <button onclick="chooseEnding('good')">Seal the Mask (Good Ending)</button>
+        <button onclick="chooseEnding('neutral')">Use its Power (Neutral Ending)</button>
+        <button onclick="chooseEnding('bad')">Embrace the Abyss (Bad Ending)</button>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="chapter8_music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="CHAPTER 8.js"></script>
+
+</body>
+</html>

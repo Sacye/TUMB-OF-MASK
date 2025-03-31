@@ -1,0 +1,27 @@
+body {
+    background: url('Messenger_creation_D9B4EC5E-06BE-4A26-857C-CD7C452890B8.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.menu {
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #f4e3de90;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #10100f;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomb of Mask - Main Menu</title>
+    <link rel="stylesheet" href="TUMBOFMASK.css">
+</head>
+<body>
+    <div class="background-container">
+        <!-- Header Container for Title and Dev Note -->
+        <div class="header-container">
+            <h1 class="game-title">Tomb of Mask</h1>
+            <p class="dev-note">This game is still in development</p>
+        </div>
+
+        <!-- Left Side Buttons (Settings & Contacts) -->
+        <div class="left-buttons">
+            <img id="soundBtn" src="Mute.png" alt="Mute" onclick="toggleMute()"> <!-- Updated mute button -->
+            <img src="Contact.png" alt="Contacts" onclick="window.location.href='Contacts.html'"> <!-- Updated path -->
+        </div>
+
+        <!-- Right Side Button (Gallery) -->
+        <div class="right-button">
+            <img src="GalleryButton.png" alt="Gallery" onclick="window.location.href='Gallery.html'"> <!-- Updated path -->
+        </div>
+
+        <!-- New Game, Previous Game, and Info -->
+        <div class="game-menu" id="game-menu">
+            <button onclick="window.location.href='Prologue.html?playSound=true'">New Game</button>
+            <!-- Removed Previous Game button -->
+            <button onclick="window.location.href='Information.html'">Info</button>
+        </div>
+    </div>
+    <script src="TUMBOFMASK.js"></script>
+</body>
+</html>

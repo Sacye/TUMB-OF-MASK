@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 - The Abyss Awakens</title>
+    <link rel="stylesheet" href="CHAPTER 7.css">
+</head>
+<body>
+
+    <!-- Introduction Section -->
+    <div id="introduction">
+        <p>Welcome to Chapter 7: The Abyss Awakens. Prepare for the ultimate battle!</p>
+        <button onclick="startGame()">Start</button>
+    </div>
+
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+
+    <!-- Dialogue Box -->
+    <div id="dialogue-box" style="display: none;">
+        <p id="dialogue-text"></p>
+        <button onclick="nextDialogue()">Next</button>
+    </div>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls">
+        <button id="up">▲</button>
+        <div class="horizontal-buttons">
+            <button id="left">◀</button>
+            <button id="attack">⚔</button>
+            <button id="magic">✨</button>
+            <button id="right">▶</button>
+        </div>
+        <button id="down">▼</button>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="chapter7_music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="CHAPTER 7.js"></script>
+
+</body>
+</html>

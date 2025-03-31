@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 - The Ancient Ruins</title>
+    <link rel="stylesheet" href="CHAPTER 4.css">
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Dialogue Box -->
+    <div id="dialogue-box">
+        <p id="dialogue-text"></p>
+        <button onclick="nextDialogue()">Next</button>
+    </div>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls">
+        <button id="up">▲</button>
+        <div class="horizontal-buttons">
+            <button id="left">◀</button>
+            <button id="interact">🗨</button>
+            <button id="right">▶</button>
+        </div>
+        <button id="down">▼</button>
+    </div>
+
+    <!-- Add Talk Prompt -->
+    <div id="talk-prompt" style="display: none; position: fixed; bottom: 20%; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; z-index: 100;">
+        Press 'E' or 🗨 to interact
+    </div>
+
+    <!-- Quest Notification -->
+    <div id="quest-notification" style="position: fixed; top: 10%; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; z-index: 100; font-size: 16px; display: none;">
+        New Quest: Find the hidden door
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="Eleven.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="CHAPTER 4.js"></script>
+
+    <script>
+        function nextDialogue() {
+            document.getElementById("dialogue-box").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

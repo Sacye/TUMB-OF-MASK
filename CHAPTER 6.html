@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6 - The Truth of the Mask</title>
+    <link rel="stylesheet" href="CHAPTER 6.css">
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Dialogue Box -->
+    <div id="dialogue-box">
+        <p id="dialogue-text"></p>
+        <button onclick="nextDialogue()">Next</button>
+    </div>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls">
+        <button id="up">▲</button>
+        <div class="horizontal-buttons">
+            <button id="left">◀</button>
+            <button id="attack">⚔</button>
+            <button id="magic">✨</button>
+            <button id="right">▶</button>
+        </div>
+        <button id="down">▼</button>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="Eleven.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="CHAPTER 6.js"></script>
+    <script>
+        function showStartScreen() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "white";
+            ctx.font = "20px 'Press Start 2P'";
+            ctx.textAlign = "center";
+            ctx.fillText("Press ENTER to Start", canvas.width / 2, canvas.height / 2 - 20);
+            ctx.fillText("Arrow Keys: Move", canvas.width / 2, canvas.height / 2 + 20);
+            ctx.fillText("1: Shield", canvas.width / 2, canvas.height / 2 + 50);
+            ctx.fillText("2: Magic Attack", canvas.width / 2, canvas.height / 2 + 80);
+        }
+    </script>
+
+</body>
+</html>

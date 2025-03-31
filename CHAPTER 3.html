@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3 - A New Journey</title>
+    <link rel="stylesheet" href="CHAPTER 3.css">
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Dialogue Box -->
+    <div id="dialogue-box">
+        <p id="dialogue-text"></p>
+        <button onclick="nextDialogue()">Continue</button>
+    </div>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls">
+        <button id="up">▲</button>
+        <div class="horizontal-buttons">
+            <button id="left">◀</button>
+            <button id="interact">🗨</button>
+            <button id="right">▶</button>
+        </div>
+        <button id="down">▼</button>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="Eleven.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="CHAPTER 3.js"></script>
+    <script>
+        function nextDialogue() {
+            startDialogueSequence();
+        }
+    </script>
+
+</body>
+</html>

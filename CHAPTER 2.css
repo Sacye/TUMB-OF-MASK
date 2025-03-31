@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background: black;
+}
+
+/* Dialogue Box */
+#dialogue-box {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 10px;
+    width: 300px;
+    text-align: center; /* Center-align text */
+    z-index: 100;
+    animation: fadeIn 1s ease-in-out;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Dialogue Text */
+#dialogue-text {
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Add line height for better readability */
+    margin-bottom: 15px; /* Add spacing between text and button */
+    word-wrap: break-word; /* Ensure long words break to fit within the box */
+    word-spacing: 2px; /* Add spacing between words */
+}
+
+/* Next Button */
+#dialogue-box button {
+    visibility: visible;
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 8px 15px;
+    border: none;
+    background: #809dd6;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: block; /* Ensure the button takes up its own line */
+    width: fit-content; /* Adjust button width to fit its content */
+}
+
+#dialogue-box.show-next button {
+    visibility: visible;
+}
+
+/* Button Hover Effect */
+#dialogue-box button:hover {
+    background: #cccccc;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Controls */
+#mobile-controls {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    z-index: 10;
+}
+
+.horizontal-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+/* Button Size Auto-Scales */
+button {
+    width: 12vw;
+    height: 12vw;
+    max-width: 50px;
+    max-height: 50px;
+    font-size: 16px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adjust Button Size for Smaller Screens */
+@media (max-width: 600px) {
+    button {
+        width: 14vw;
+        height: 14vw;
+        font-size: 14px;
+    }
+    
+    /* Hide the "Next" button on mobile devices */
+    #dialogue-box button {
+        display: none;
+    }
+    
+    /* Hide the mobile controls on mobile devices */
+    #mobile-controls {
+        display: none;
+    }
+}
+
+/* Ensure buttons appear in landscape mode */
+@media (orientation: landscape) {
+    #mobile-controls {
+        bottom: 5%;
+        left: 5%;
+        display: flex !important;
+    }
+}
+
+/* Hide Mobile Controls on PC */
+@media (min-width: 768px) {
+    #mobile-controls {
+        display: none;
+    }
+}
